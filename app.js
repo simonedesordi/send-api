@@ -47,7 +47,7 @@ app.get('/', function(request, response) {
 
 // Render a form to enter a new post
 app.get('/new', function(request, response) {
-    response.send(200, 'Bella li');
+    response.send(200, 'Bella li Jhonny');
 });
 
 // create a new blog post object
