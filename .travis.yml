@@ -1,0 +1,13 @@
+sudo: false
+language: node_js
+node_js:
+- '0.12'
+notifications:
+  email: simone.desordi@gmail.com
+deploy:
+  provider: heroku
+  api_key:
+    secure: ShpLHFy2zFJz9Xb7bMUbiOtrndtkD1GgCiYX/26T9Go3glVLf7DjglLS79Wy80IQSkIwJQhj6lU+QWUdhxMHXrOVop02JGDpAifIEljXgGfuYERmUEJKASvAKfYkraKHOgolzsGdFQoeeoLuotVmA8lxVtoF2lUC5JXFYeTizTC1BlkBvn7dn+1fu7tCRxllfOlXOdFgbbn7dQo5oQjBxwFqJacUZOBZxgCa1uhnqnWV/zPIM33UIBhlDB6IntVkgeCfMCUFWKoUPDqrnIczfAN1dKX5TggB7v4QQ4sfT8t6SXLEA5rfGqu4insYEG7shmf9ZT2Kru6QPPPZuRrx3V4r36pluhcnkm8orRWmHJUmUr8moYvjqxbn+n1BQRdMLsUpa3R7ul1AYDz89Hqll/n/6X7q4I6rFQx8D+5aSmQLqQbqJa/odJVQ5G245j17DDbpI5B1oKd4BDv0t49pW6VIwnpH6sIDZXc7e11DvgQhV3GNhHstdbIbG9AvdJfPX8/VNtihN7RsSxZvxbUTNB0FKOYd78Ko/0V79RGSlejCbZvEQTfrIrJh5PUOy7Ia1nwudd23MQyAJsFeGaNjzc26ggSE9cOH5XCUpJxSK2W6DWAFclN5Au/sYeEBMuYoqIxJruvL2HCI0yMDfFVCPS5IwC96kHMoK9/TWbzpou0=
+  app: send-api
+  on:
+    repo: simonedesordi/send-api
