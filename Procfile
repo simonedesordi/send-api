@@ -1,1 +1,1 @@
-web: node lib/app.js 9191 $PORT
+web: npm start 9191 $PORT

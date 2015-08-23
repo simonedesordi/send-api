@@ -2,7 +2,8 @@ var restify = require('restify');
 console.log("process.argv[2] = " + process.argv[2]);
 console.log("process.argv[3] = " + process.argv[3]);
 console.log("process.argv[4] = " + process.argv[4]);
-var port = process.argv[2] || 9090;
+console.log("process.env.PORT = " + process.env.PORT);
+var port = process.env.PORT || 9090;
 console.log("port = " + port);
 
 
