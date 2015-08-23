@@ -6,7 +6,7 @@ console.log("portParameter = " + portParameter);
 var portGlobal = process.env.PORT
 console.log("portGlobal = " + portGlobal);
 
-var port = portParameter || portGlobal;
+var port = portGlobal || portParameter || 9090;
 console.log("port = " + port);
 
 function respond(req, res, next) {
