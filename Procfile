@@ -1,1 +1,1 @@
-web: npm start 9191 $PORT
+web: npm start $PORT
