@@ -9,7 +9,7 @@
     "dev-server": "nodemon lib/app",
     "dev-start": "npm run watch-js & npm run dev-server",
     "build": "npm run clean && ./node_modules/.bin/babel src -d lib --experimental",
-    "start": "node lib/app"
+    "start": "node lib/app 9292"
   },
   "author": "@simonedesordi",
   "dependencies": {
