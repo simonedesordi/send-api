@@ -28,6 +28,3 @@ node_modules
 npm-debug.log
 .DS_Store
 /*.env
-
-# Babel output files
-lib
