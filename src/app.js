@@ -1,23 +1,14 @@
-var restify = require('restify');
+var VERSION = "1.0.0";
 
-var portParameter = process.argv[2];
-console.log("portParameter = " + portParameter);
+var express = require('express');
+var app = express();
+var configurator = require('./config/ApiConfig');
 
-var portGlobal = process.env.PORT
-console.log("portGlobal = " + portGlobal);
+configurator.config(app, VERSION);
 
-var port = portGlobal || portParameter || 9090;
-console.log("port = " + port);
+let port = configurator.port();
 
-function respond(req, res, next) {
-	res.send('Hello ' + req.params.name);
-	next();
-}
+// START THE SERVER
+app.listen(port);
 
-var server = restify.createServer();
-server.get('/hello/:name', respond);
-server.head('/hello/:name', respond);
-
-server.listen(port, function() {
-	console.log('%s listening at %s', server.name, server.url);
-});
+console.log('Starting API v ' + VERSION + ' server on port ' + port);

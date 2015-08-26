@@ -1,20 +1,20 @@
 {
   "name": "send-api",
   "version": "0.0.1",
-  "main": "lib/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "clean": "rm -rf lib",
+    "build": "./node_modules/.bin/babel src -d lib --experimental",
     "watch-js": "./node_modules/.bin/babel src -d lib --experimental -w",
-    "dev-server": "nodemon lib/app",
+    "dev-server": "nodemon --watch lib",
     "dev-start": "npm run watch-js & npm run dev-server",
-    "build": "npm run clean && ./node_modules/.bin/babel src -d lib --experimental",
     "start": "node lib/app"
   },
   "author": "@simonedesordi",
   "dependencies": {
-    "mongoose":"*",
-    "restify": "4.0.0"
+    "mongoose": "*",
+    "express": ">4.0.0",
+    "body-parser": "~1.0.1"
   },
   "devDependencies": {
     "babel": "^5.8.21",
