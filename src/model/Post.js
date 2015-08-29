@@ -7,8 +7,8 @@ mongoose.connect('mongodb://admin:admin@ds031203.mongolab.com:31203/node-worksho
 // Create a database schema for our Post object, which will describe both it's
 // data and it's behavior.
 var postSchema = mongoose.Schema({
-	title: String,
-	content: String
+    title: String,
+    content: String
 });
 
 // Create a model object constructor that will have ODM functionality like .save()...
