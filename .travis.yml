@@ -1,7 +1,7 @@
 sudo: false
 language: node_js
 node_js:
-- '0.10'
+- 'iojs'
 notifications:
   email: simone.desordi@gmail.com
 cache:
