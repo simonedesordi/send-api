@@ -26,7 +26,7 @@ var port = function () {
     var portGlobal = process.env.PORT;
     console.log("portGlobal = " + portGlobal);
 
-    var port = portGlobal /*|| portParameter*/ || 9090;
+    var port = portGlobal /*|| portParameter*/ || '9090';
     console.log("port = " + port);
 
     return port;

@@ -4,8 +4,8 @@
   "scripts": {
     "test": "jest",
     "clean": "rm -rf lib",
-    "build": "./node_modules/.bin/babel src -d lib --experimental",
-    "watch-js": "./node_modules/.bin/babel src -d lib --experimental -w",
+    "build": "./node_modules/.bin/babel src -d lib --ignore=*__tests__*",
+    "watch-js": "./node_modules/.bin/babel src -d lib --ignore=*__tests__* -w",
     "dev-server": "nodemon --watch lib",
     "dev-start": "npm run watch-js & npm run dev-server",
     "start": "node lib/app"
