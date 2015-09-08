@@ -6,7 +6,9 @@ var configurator = require('./config/ApiConfig');
 
 configurator.config(app, VERSION);
 
-let port = configurator.port();
+configurator.addRoutes(app, VERSION);
+
+const port = configurator.port();
 
 // START THE SERVER
 app.listen(port);

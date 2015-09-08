@@ -13,7 +13,7 @@
   "author": "@simonedesordi",
   "dependencies": {
     "mongoose": "*",
-    "express": ">4.0.0",
+    "express": "~4.13.0",
     "body-parser": "~1.0.1"
   },
   "devDependencies": {

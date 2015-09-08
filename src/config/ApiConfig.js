@@ -13,11 +13,15 @@ var config = function (app, version) {
         extended: true
     }));
     app.use(bodyParser.json());
+};
 
-    // set all the routes
+/**
+ * Set web routing to use
+ * */
+var addRoutes = function (app, version) {
     var router = require('../routing/routing-' + version);
     app.use('/api/v' + version, router);
-};
+}
 
 /**
  Return web server port
@@ -34,5 +38,5 @@ var port = function () {
 
 
 module.exports = {
-    config, port
+    config, port, addRoutes
 };
