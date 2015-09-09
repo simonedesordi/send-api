@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "scripts": {
     "test": "jest",
-    "clean": "rm -rf lib",
-    "build": "./node_modules/.bin/babel src -d lib --ignore=*__tests__*",
-    "watch-js": "./node_modules/.bin/babel src -d lib --ignore=*__tests__* -w",
-    "dev-server": "nodemon --watch lib",
+    "clean": "rm -rf app",
+    "build": "./node_modules/.bin/babel src -d app --ignore=*__tests__*",
+    "watch-js": "./node_modules/.bin/babel src -d app --ignore=*__tests__* -w",
+    "dev-server": "nodemon --watch app",
     "dev-start": "npm run watch-js & npm run dev-server",
-    "start": "node lib/app"
+    "start": "node app/app.js"
   },
   "author": "@simonedesordi",
   "dependencies": {
